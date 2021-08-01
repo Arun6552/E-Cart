@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'category',
     'accounts',
     'store',
+    'carts',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +66,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'category.contex_processor1.menu_links' #menu_links will be available on all templates.   -->appname.filename.functionname
+                'category.contex_processor1.menu_links', #menu_links will be available on all templates.   -->appname.filename.functionname
+                'carts.context_processor.counter'
             ],
         },
     },
