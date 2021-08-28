@@ -14,15 +14,16 @@
     <div class="card">
         <div class="card-body">
             <h4 class="card-title mb-4">Billing Address</h4>
-            <form action="" method = "post">
+            <form action="{% url 'place_order' %}" method = "post">
                 {% csrf_token %}
+                
                 <div class="form-row">
                     <div class="col form-group">
                         <label for="First Name">First Name</label>
                         <input type="text" name = "first_name" class="form-control"required>
                     </div>
                     <div class="col form-group">
-                        <label for="Last Name">Last Name</label>First Name</label>
+                        <label for="Last Name">Last Name</label>
                         <input type="text" name = "last_name" class="form-control"required>
                     </div>
 
@@ -53,22 +54,22 @@
                         <div class="col form-group">
                             
                             <label for="city">City</label>
-                            <input type="text" name = "City" class="form-control"required>
+                            <input type="text" name = "city" class="form-control"required>
                         </div>
                         <div class="col form-group"> 
                             <label for="State">State</label>
-                            <input type="text" name = "State" class="form-control"required>
+                            <input type="text" name = "state" class="form-control"required>
                         </div>
                         <div class="col form-group">
                             <label for="Country">Country</label>
-                            <input type="text" name = "Country" class="form-control" required>
+                            <input type="text" name = "country" class="form-control"required> 
                         </div>
     
                 </div>
                 <div class="form-row">
                         <div class="col form-group">
-                            <label for="Order Now">Order Now</label>
-                            <textarea name='order_now' row="2" class="form-control"></textarea>
+                            <label for="Order Now">Order Note</label>
+                            <textarea name = "order_note"  row="2" class="form-control"></textarea>
                 </div>
                 </div>
        
@@ -108,6 +109,7 @@
                                             {% endfor %}
                                             
                                         {% endif %}
+                                        </p>
                                             
                                 </figcaption>
                             </figure>
