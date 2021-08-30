@@ -59,7 +59,3 @@ $(document).ready(function() {
 // jquery end
 
 
-//custom
-setTimeout(function(){
-    $('#message').fadeOut('3000');
-},4000);
